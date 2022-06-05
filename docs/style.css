@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(211, 140, 140);
+}
+
+.mainBarDiv{
+    height: 100px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#logoMain{
+    width: 100px;
+    height: 100px;
+    /* size: 50%; */
+}
+
+h1{
+    font-family: 'Brush Script MT', cursive;
+    font-size: xx-large;
+    /* color: gold; */
+}
+
+#mainBar{
+    margin: 0%;
+    padding: 0%;
+    /* list-style-type: none; */
+    display: flex;
+    /* flex-flow: row; */
+    justify-content: center; 
+    align-items: center;
+}
+
+#navBar{
+    background-color: violet;
+    /* border-top: 1px solid rgb(211, 140, 140);
+    border-bottom: 1px solid rgb(211, 140, 140); */
+}
+
+ul{
+    margin: 0%;
+    padding: 0%;
+    list-style-type: none;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-evenly;    
+}
+
+li a {
+    display: block;
+    color: black;
+    padding: 3px;
+    text-decoration: none;
+  }
+
+.subBody{
+    display: flex;
+    flex-flow:row; 
+    justify-content: center;     
+}
+
+form{
+    width: 400px;
+}
+
+.elemBlock{
+    width: 400px;
+    height: 75px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputText{
+    height: 25px;
+    width: 300px;
+}
+
+.inputCom{
+    height: 50px;
+    width: 300px;
+}
+
+.formatoError{
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: x-small;
+}
+
+.hiddenError {
+    display: none;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Copatible" content="IE=edge">
+        <link rel="stylesheet" href="./Reset.css">
+        <link rel="stylesheet" href="./style.css">
+        <!-- <link rel="stylesheet" href="./media-queries.css"> -->
+        <script src="./app.js"></script>
+        <title>Meating | Boutique the carnes online</title>
+    </head>
+    <body>
+        <header>
+            <div id="mainBar">
+                <div class="mainBarDiv">
+                    <img id="logoMain" src="./imagenes/logo.png" alt="logo">                    
+                </div>
+                <div class="mainBarDiv">
+                    <h1>~Meating~</h1>
+                </div>
+            </div>
+            <div>
+                <nav id="navBar">
+                    <ul>
+                        <li><a href="" title="Meating | HOME" alt="Meating | HOME">HOME</a></li>
+                        <li><a href="" title="Meating | TUS PEDIDOS" alt="Meating | TUS PEDIDOS">TUS PEDIDOS</a></li>
+                        <li><a href="" title="Meating | PRODUCTOS" alt="Meating | PRODUCTOS">PRODUCTOS</a></li>
+                        <li><a href="" title="Meating | NOVEDADES" alt="Meating | NOVEDADES">NOVEDADES</a></li>
+                        <li><a href="" title="Meating | CONTACTOS" alt="Meating | CONTACTOS">CONTACTOS</a></li>
+                        <li><a href="" title="Meating | ACERCA DE" alt="Meating | ACERCA DE">ACERCA DE</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <div>
+                <div class="subBody">
+                    <h2>Contanos un poco sobre vos</h2>
+                </div>
+                <div class="subBody">
+                    <form action="">
+                        <div class="elemBlock">
+                            <div class="subBody">
+                                <input type="text" id="subNombre" placeholder="Nombre" class="inputText">   
+                            </div>
+                            <div class="subBody">
+                                <p id="nombreError" class="hiddenError formatoError">Minimo 3 letras</p>
+                            </div>
+                        </div>
+                        <div class="elemBlock">
+                            <div class="subBody">
+                                <input type="text" id="subApellido" placeholder="Apellido" class="inputText">
+                            </div>
+                            <div class="subBody">
+                                <p id="apeError" class="hiddenError formatoError">Minimo 3 letras</p>
+                            </div>
+                        </div>
+                        <div class="elemBlock">
+                            <div class="subBody">
+                                <input type="text" id="subEmail" placeholder="Email" class="inputText">
+                            </div>
+                            <div class="subBody">
+                                <p id="emailError" class="hiddenError formatoError">No es un formato aceptable de mail</p>
+                            </div>
+                        </div>
+                        <div class="elemBlock">
+                            <div class="subBody">
+                                <input type="number" id="subEdad" placeholder="Edad" class="inputText">
+                            </div>
+                            <div class="subBody">
+                                <p id="edadError" class="hiddenError formatoError">Número entero mayor a 0 y menor a 100</p>
+                            </div>
+                        </div>
+                        <div class="subBody">
+                            <label for="Masc">Masculino</label>
+                            <input type="radio" name="Genero" id="Masc" value="Masc">
+                            <label for="Fem">Femenino</label>
+                            <input type="radio" name="Genero" id="Fem" value="Fem">
+                            <label for="NoBin">No Binario</label>
+                            <input type="radio" name="Genero" id="NoBin" value="NoBin">
+                        </div>
+                        <div class="subBody elemBlock">
+                            <h3>Contanos que te interesa</h3>
+                            <div>
+                                <label for="Deportes">Deportes</label>
+                                <input type="checkbox" name="Deportes" id="Deportes"> 
+                                <label for="Musica">Música</label>
+                                <input type="checkbox" name="Musica" id="Musica">
+                                <label for="Juegos">Juegos</label>
+                                <input type="checkbox" name="Juegos" id="Juegos"> 
+                                <label for="Tecnologia">Tecnología</label>
+                                <input type="checkbox" name="Tecnologia" id="Tecnologia"> 
+                                <label for="Otros">Otros</label>
+                                <input type="checkbox" name="Otros" id="Otros"> 
+                            </div>                  
+                        </div>
+                        <div class="subBody elemBlock">
+                            <h3>Tu País</h3>
+                            <select name="Pais" id="Pais">
+                                <option value="Argentina">Argentina</option>
+                                <option value="Brasil">Brasil</option>
+                                <option value="Chile">Chile</option>
+                                <option value="Uruguay">Uruguay</option>
+                            </select>
+                        </div>
+                        <div class="subBody elemBlock">
+                            <h3>Comentarios</h3>
+                            <textarea id="subCom" cols="30" rows="10" class="inputCom"></textarea></textarea>
+                        </div>
+                        <div class="subBody">
+                            <input class="button" type="submit" value="Enviar">
+                            <!-- <input class="button" type="reset" value="Reset"> -->
+                        </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
