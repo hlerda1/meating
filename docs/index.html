@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Copatible" content="IE=edge">
         <link rel="stylesheet" href="./Reset.css">
         <link rel="stylesheet" href="./style.css">
-        <!-- <link rel="stylesheet" href="./media-queries.css"> -->
+        <link rel="stylesheet" href="./media-queries.css">
         <script src="app.js"></script>
         <title>Meating | Boutique the carnes online</title>
     </head>
@@ -17,6 +17,9 @@
                 </div>
                 <div class="mainBarDiv">
                     <h1>~Meating~</h1>
+                </div>
+                <div id="menuDiv" class="mainBarDiv">
+                    <img id="menuMain" src="./imagenes/Menu.png" alt="Menu">                    
                 </div>
             </div>
             <div>
@@ -37,83 +40,95 @@
                 <div class="subBody">
                     <h2>Contanos un poco sobre vos</h2>
                 </div>
-                <div class="subBody">
-                    <form id="formSub" name="myForm" action="" onsubmit="return validateForm()" method="post">
-                        <div class="elemBlock">
-                            <div class="subBody ">
-                                <input type="text" id="subNombre" name="fNombre" placeholder="Nombre" class="inputText">   
+                <div id="mainDiv" class="subBody">
+                    <form id="formSub" name="myForm" action="">
+                        <section class="">
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="text" id="subNombre" name="fNombre" placeholder="Nombre" class="inputText">   
+                                </div>
+                                <div class="subBody">
+                                    <p id="nombreError" class="hiddenError formatoError">Minimo 3 letras</p>
+                                </div>
                             </div>
-                            <div class="subBody">
-                                <p id="nombreError" class="hiddenError formatoError">Minimo 3 letras</p>
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="text" id="subApellido" name="fApellido" placeholder="Apellido" class="inputText">
+                                </div>
+                                <div class="subBody">
+                                    <p id="apeError" class="hiddenError formatoError">Minimo 3 letras</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="elemBlock">
-                            <div class="subBody ">
-                                <input type="text" id="subApellido" name="fApellido" placeholder="Apellido" class="inputText">
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="text" id="subEmail" name="fMail" placeholder="Email" class="inputText">
+                                </div>
+                                <div class="subBody">
+                                    <p id="emailError" class="hiddenError formatoError">No es un formato aceptable de mail</p>
+                                </div>
                             </div>
-                            <div class="subBody">
-                                <p id="apeError" class="hiddenError formatoError">Minimo 3 letras</p>
+                            <div class="elemBlock">
+                                <div class="subBody ">
+                                    <input type="number" id="subEdad" name="fEdad" placeholder="Edad" class="inputText">
+                                </div>
+                                <div class="subBody">
+                                    <p id="edadError" class="hiddenError formatoError">Número entero mayor a 0 y menor a 100</p>
+                                </div>
                             </div>
-                        </div>
-                        <div class="elemBlock">
-                            <div class="subBody ">
-                                <input type="text" id="subEmail" name="fMail" placeholder="Email" class="inputText">
+                        </section>
+                        <section class=""> 
+                            <h3 class="subBody">Como te identificás</h3>                           
+                            <div class="elemBlock2">
+                                <div id="subGenero" class="subBody">
+                                    <label for="Masc">Masculino</label>
+                                    <input type="radio" name="fGenero" id="Masc" value="Masculino">
+                                    <label for="Fem">Femenino</label>
+                                    <input type="radio" name="fGenero" id="Fem" value="Femenino">
+                                    <label for="NoBin">No Binario</label>
+                                    <input type="radio" name="fGenero" id="NoBin" value="No Binario">
+                                </div>
                             </div>
-                            <div class="subBody">
-                                <p id="emailError" class="hiddenError formatoError">No es un formato aceptable de mail</p>
+                            <h3 class="subBody">Contanos que te interesa</h3>
+                            <div class="elemBlock2">                                
+                                <div id="subTemas" class="subBody">
+                                    <label for="Deportes">Deportes</label>
+                                    <input type="checkbox" name="fTemas" id="Deportes" value="Deportes"> 
+                                    <label for="Musica">Música</label>
+                                    <input type="checkbox" name="fTemas" id="Musica" value="Musica">
+                                    <label for="Juegos">Juegos</label>
+                                    <input type="checkbox" name="fTemas" id="Juegos" value="Juegos"> 
+                                    <label for="Tecnologia">Tecnología</label>
+                                    <input type="checkbox" name="fTemas" id="Tecnologia" value="Tecnologia"> 
+                                    <label for="Otros">Otros</label>
+                                    <input type="checkbox" name="fTemas" id="Otros" value="Otros"> 
+                                </div>                  
                             </div>
-                        </div>
-                        <div class="elemBlock">
-                            <div class="subBody ">
-                                <input type="number" id="subEdad" name="fEdad" placeholder="Edad" class="inputText">
+                            <h3 class="subBody">Tu País</h3>
+                            <div class="elemBlock2"> 
+                                <div class="subBody">                                
+                                    <select id="subPais" class="" name="fPais" id="subPais">
+                                        <option value=""></option>
+                                        <option value="Argentina">Argentina</option>
+                                        <option value="Brasil">Brasil</option>
+                                        <option value="Chile">Chile</option>
+                                        <option value="Uruguay">Uruguay</option>
+                                    </select>
+                                </div>
                             </div>
-                            <div class="subBody">
-                                <p id="edadError" class="hiddenError formatoError">Número entero mayor a 0 y menor a 100</p>
+                            <h3 class="subBody">Comentarios</h3>
+                            <div class="elemBlock">
+                                <div class="subBody">                                
+                                    <textarea id="subCom" cols="30" rows="10" class="inputCom"></textarea>
+                                </div>
                             </div>
-                        </div>
-                        <div id="subGenero" class="subBody ">
-                            <label for="Masc">Masculino</label>
-                            <input type="radio" name="fGenero" id="Masc" value="Masculino">
-                            <label for="Fem">Femenino</label>
-                            <input type="radio" name="fGenero" id="Fem" value="Femenino">
-                            <label for="NoBin">No Binario</label>
-                            <input type="radio" name="fGenero" id="NoBin" value="No Binario">
-                        </div>
-                        <div class="subBody elemBlock">
-                            <h3>Contanos que te interesa</h3>
-                            <div id="subTemas" class="">
-                                <label for="Deportes">Deportes</label>
-                                <input type="checkbox" name="fTemas" id="Deportes" value="Deportes"> 
-                                <label for="Musica">Música</label>
-                                <input type="checkbox" name="fTemas" id="Musica" value="Musica">
-                                <label for="Juegos">Juegos</label>
-                                <input type="checkbox" name="fTemas" id="Juegos" value="Juegos"> 
-                                <label for="Tecnologia">Tecnología</label>
-                                <input type="checkbox" name="fTemas" id="Tecnologia" value="Tecnologia"> 
-                                <label for="Otros">Otros</label>
-                                <input type="checkbox" name="fTemas" id="Otros" value="Otros"> 
-                            </div>                  
-                        </div>
-                        <div class="subBody elemBlock">
-                            <h3>Tu País</h3>
-                            <select id="subPais" class="" name="fPais" id="subPais">
-                                <option value=""></option>
-                                <option value="Argentina">Argentina</option>
-                                <option value="Brasil">Brasil</option>
-                                <option value="Chile">Chile</option>
-                                <option value="Uruguay">Uruguay</option>
-                            </select>
-                        </div>
-                        <div class="subBody elemBlock">
-                            <h3>Comentarios</h3>
-                            <textarea id="subCom" cols="30" rows="10" class="inputCom"></textarea></textarea>
-                        </div>
-                        <div class="subBody">
-                            <!-- <input id="btnEnviar" type="submit" value="Enviar"> -->
-                            <button type="button" onclick="myFunction()">Enviar</button>
-                            <!-- <input class="button" type="reset" value="Reset"> -->
-                        </div>
-                    </div>
+                        </section>
+                        <section>
+                            <div class="elemBlock2">                
+                                <div class="subBody">                            
+                                    <button type="button" onclick="myFunction()">Enviar</button>
+                                </div>    
+                            </div> 
+                        </section>                                      
                     </form>
                 </div>
             </div>
@@ -128,7 +143,7 @@
                 <p id="pApellido" class="pModal">Apellido:</p>
                 <p id="pEmail" class="pModal">Email:</p>
                 <p id="pEdad" class="pModal">Edad</p>
-                <p id="pSexo" class="pModal">Sexo</p>
+                <p id="pGenero" class="pModal">Sexo</p>
                 <p id="pTemas" class="pModal">Temas</p>
                 <p id="pPais" class="pModal">País</p>
                 </div>
@@ -137,7 +152,9 @@
             <!-- tHE mODAL -->
         </main>
         <footer>
-
+            <h3>CARNAMOR S.R.L.</h3>
+            <p>Todos los derechos reservados</p>
+            <p>contacto: chucho@elcarnicero.com</p>
         </footer>
     </body>
 </html>

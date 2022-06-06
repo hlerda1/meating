@@ -2,6 +2,14 @@ body{
     background-color: rgb(211, 140, 140);
 }
 
+p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+label{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 .mainBarDiv{
     height: 100px;
     width: 200px;
@@ -11,8 +19,14 @@ body{
 }
 
 #logoMain{
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
+    /* size: 50%; */
+}
+
+#menuMain{
+    width: 50px;
+    height: 50px;
     /* size: 50%; */
 }
 
@@ -24,8 +38,16 @@ h1{
 
 h2{
     padding-top: 20px;
+    padding-bottom: 20px;
     font-family: 'Brush Script MT', cursive;
     font-size: large;
+}
+
+h3{
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-family: 'Brush Script MT', cursive;
+    /* font-size: large; */
 }
 
 .pModal{
@@ -55,15 +77,22 @@ ul{
     list-style-type: none;
     display: flex;
     flex-flow: row;
-    justify-content: space-evenly;    
+    justify-content: space-evenly;   
+     
 }
 
 li a {
     display: block;
     color: black;
     padding: 3px;
-    text-decoration: none;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-decoration: none;    
   }
+
+li a:hover{
+    background-color: #c05555;
+    /* color: red */
+}
 
 .subBody{
     display: flex;
@@ -75,13 +104,27 @@ form{
     width: 400px;
 }
 
+/* #formSub{
+    display: flex;
+    flex-flow: column;
+} */
+
 .elemBlock{
     width: 400px;
     height: 75px;
     display: flex;
     flex-flow: column;
     align-items: center;
-    justify-content: center;
+    justify-content: top;
+}
+
+.elemBlock2{
+    width: 400px;
+    height: 40px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: top;
 }
 
 .inputText{
@@ -104,7 +147,7 @@ form{
     display: none;
 }
 
-.alertaRoja{
+.alertRed{
     border: 2px solid red;
 }
 
@@ -146,4 +189,15 @@ form{
     color: black;
     text-decoration: none;
     cursor: pointer;
+  }
+
+  footer{
+      background-color: violet;
+      padding-top: 30px;
+      padding-bottom: 20px;
+      font-family: 'Brush Script MT';
+      display: flex;
+      flex-flow: column;
+      align-items: center;
+      justify-content: center;
   }

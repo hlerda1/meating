@@ -30,27 +30,27 @@ window.onload = function() {
 
     // Clear error function
     function clearRad(e){
-        radGenero.classList.remove('alertaRoja');
+        radGenero.classList.remove('alertRed');
     }
 
     function clearNomError(e) {
         nomError.classList.add('hiddenError');
-        textNombre.classList.remove('alertaRoja');
+        textNombre.classList.remove('alertRed');
     }
 
     function clearApeError(e) {
         apeError.classList.add('hiddenError');
-        textApellido.classList.remove('alertaRoja');
+        textApellido.classList.remove('alertRed');
     }
 
     function clearEmailError(e) {
         emailError.classList.add('hiddenError');
-        textEmail.classList.remove('alertaRoja');
+        textEmail.classList.remove('alertRed');
     }
 
     function clearNumError() {
         edadError.classList.add('hiddenError');
-        numEdad.classList.remove('alertaRoja');
+        numEdad.classList.remove('alertRed');
     }
 
     // Validation function
@@ -86,6 +86,14 @@ window.onload = function() {
 }    
     function myFunction(){
 
+        validateBtnNombre();
+        validateBtnApellido();
+        validateBtnEmail();
+        validateBtnEdad();
+        validateBtnGenero();
+        validateBtnTemas();
+        validateBtnPais();
+
         var checks = document.querySelectorAll('input[name="fTemas"]:checked');
         var checkResumen = "";
 
@@ -99,16 +107,16 @@ window.onload = function() {
         // Get the <span> element that closes the modal
         var span = document.getElementsByClassName("close")[0];
 
-        if(validarNombre() == true && validarApellido() == true && 
-            validarEmail() == true && validarEdad() == true && 
-            validarGenero() == true && validarTemas() == true && 
-            validarPais() == true){
+        if(validateBtnNombre() == true && validateBtnApellido() == true && 
+            validateBtnEmail() == true && validateBtnEdad() == true && 
+            validateBtnGenero() == true && validateBtnTemas() == true && 
+            validateBtnPais() == true){
                 // alert("TODO BUENO")
                 document.getElementById("pNombre").innerHTML = "Nombre: "+ document.getElementById("subNombre").value;
                 document.getElementById("pApellido").innerHTML = "Apellido: "+ document.getElementById("subApellido").value;
                 document.getElementById("pEmail").innerHTML = "Email: "+ document.getElementById("subEmail").value;
                 document.getElementById("pEdad").innerHTML = "Edad: "+ document.getElementById("subEdad").value;
-                document.getElementById("pSexo").innerHTML = "Sexo: "+ document.querySelector('input[name="fGenero"]:checked').value;
+                document.getElementById("pGenero").innerHTML = "Genero: "+ document.querySelector('input[name="fGenero"]:checked').value;
                 document.getElementById("pTemas").innerHTML = "Temas: " + checkResumen;
                 document.getElementById("pPais").innerHTML = "Pais: "+ document.getElementById("subPais").value;
                 modal.style.display = "block";
@@ -127,10 +135,10 @@ window.onload = function() {
         }
     }
 
-    function validarEdad() {
+    function validateBtnEdad() {
         let x = document.getElementById("subEdad").value;
         if (x == "") {
-            document.getElementById("subEdad").classList.add('alertaRoja');            
+            document.getElementById("subEdad").classList.add('alertRed');            
             return false;
         }else if(x < 0 || x >= 100){
             edadError.classList.remove('hiddenError');
@@ -141,10 +149,10 @@ window.onload = function() {
         }
     }
 
-    function validarNombre() {
+    function validateBtnNombre() {
         let x = document.getElementById("subNombre").value;
         if (x == "") {
-            document.getElementById("subNombre").classList.add('alertaRoja');
+            document.getElementById("subNombre").classList.add('alertRed');
             return false;
         } else if(x.length < 3){
             document.getElementById("subNombre").classList.remove('hiddenError');
@@ -154,10 +162,10 @@ window.onload = function() {
         }
     }
 
-    function validarApellido() {
+    function validateBtnApellido() {
         let x = document.getElementById("subApellido").value;
         if (x == "") {
-            document.getElementById("subApellido").classList.add('alertaRoja');
+            document.getElementById("subApellido").classList.add('alertRed');
             return false;
         } else if(x.length < 3){
             document.getElementById("subApellido").classList.remove('hiddenError');
@@ -167,11 +175,11 @@ window.onload = function() {
         }
     }
 
-    function validarEmail() {
+    function validateBtnEmail() {
         let x = document.getElementById("subEmail").value;
         var mailFormat = new RegExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
         if (x == "") {
-            document.getElementById("subEmail").classList.add('alertaRoja');
+            document.getElementById("subEmail").classList.add('alertRed');
             return false;
         } else if(mailFormat.test(x) == false){        
             document.getElementById("subEmail").classList.remove('hiddenError');
@@ -181,42 +189,37 @@ window.onload = function() {
         }
     }
 
-    // var radioButtons = document.querySelectorAll('input[name="fGenero"]');
-
-    function validarGenero() {
-        // var x = ""
+    function validateBtnGenero() {
         for (i = 0; i < document.myForm.fGenero.length; i++){
             if(document.myForm.fGenero[i].checked){
-                document.getElementById("subGenero").classList.remove('alertaRoja');
-                // x = document.myForm.fGenero[i];                
+                document.getElementById("subGenero").classList.remove('alertRed');                
                 return true;
             }
         }
-        document.getElementById("subGenero").classList.add('alertaRoja');
+        document.getElementById("subGenero").classList.add('alertRed');
         return false;
     }
 
     var checkBoxes = document.querySelectorAll('input[name="fTemas"]');
 
-    function validarTemas() {
-        // var x = false
+    function validateBtnTemas() {
         for (i = 0; i < document.myForm.fGenero.length; i++){
             if(document.myForm.fTemas[i].checked){
-                document.getElementById("subTemas").classList.remove('alertaRoja');
+                document.getElementById("subTemas").classList.remove('alertRed');
                 return true;
             }
         }
-        document.getElementById("subTemas").classList.add('alertaRoja');
+        document.getElementById("subTemas").classList.add('alertRed');
         return false;
     }
 
-    function validarPais() {
+    function validateBtnPais() {
         var x = document.getElementById('subPais').value;
         if(x == ""){
-            document.getElementById('subPais').classList.add('alertaRoja')
+            document.getElementById('subPais').classList.add('alertRed')
             return false;
         }else{
-            document.getElementById('subPais').classList.remove('alertaRoja')
+            document.getElementById('subPais').classList.remove('alertRed')
             return true;
         }
     }
