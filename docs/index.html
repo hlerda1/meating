@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="./Reset.css">
         <link rel="stylesheet" href="./style.css">
         <!-- <link rel="stylesheet" href="./media-queries.css"> -->
-        <script src="./app.js"></script>
+        <script src="app.js"></script>
         <title>Meating | Boutique the carnes online</title>
     </head>
     <body>
@@ -38,65 +38,66 @@
                     <h2>Contanos un poco sobre vos</h2>
                 </div>
                 <div class="subBody">
-                    <form action="">
+                    <form id="formSub" name="myForm" action="" onsubmit="return validateForm()" method="post">
                         <div class="elemBlock">
-                            <div class="subBody">
-                                <input type="text" id="subNombre" placeholder="Nombre" class="inputText">   
+                            <div class="subBody ">
+                                <input type="text" id="subNombre" name="fNombre" placeholder="Nombre" class="inputText">   
                             </div>
                             <div class="subBody">
                                 <p id="nombreError" class="hiddenError formatoError">Minimo 3 letras</p>
                             </div>
                         </div>
                         <div class="elemBlock">
-                            <div class="subBody">
-                                <input type="text" id="subApellido" placeholder="Apellido" class="inputText">
+                            <div class="subBody ">
+                                <input type="text" id="subApellido" name="fApellido" placeholder="Apellido" class="inputText">
                             </div>
                             <div class="subBody">
                                 <p id="apeError" class="hiddenError formatoError">Minimo 3 letras</p>
                             </div>
                         </div>
                         <div class="elemBlock">
-                            <div class="subBody">
-                                <input type="text" id="subEmail" placeholder="Email" class="inputText">
+                            <div class="subBody ">
+                                <input type="text" id="subEmail" name="fMail" placeholder="Email" class="inputText">
                             </div>
                             <div class="subBody">
                                 <p id="emailError" class="hiddenError formatoError">No es un formato aceptable de mail</p>
                             </div>
                         </div>
                         <div class="elemBlock">
-                            <div class="subBody">
-                                <input type="number" id="subEdad" placeholder="Edad" class="inputText">
+                            <div class="subBody ">
+                                <input type="number" id="subEdad" name="fEdad" placeholder="Edad" class="inputText">
                             </div>
                             <div class="subBody">
                                 <p id="edadError" class="hiddenError formatoError">Número entero mayor a 0 y menor a 100</p>
                             </div>
                         </div>
-                        <div class="subBody">
+                        <div id="subGenero" class="subBody ">
                             <label for="Masc">Masculino</label>
-                            <input type="radio" name="Genero" id="Masc" value="Masc">
+                            <input type="radio" name="fGenero" id="Masc" value="Masc">
                             <label for="Fem">Femenino</label>
-                            <input type="radio" name="Genero" id="Fem" value="Fem">
+                            <input type="radio" name="fGenero" id="Fem" value="Fem">
                             <label for="NoBin">No Binario</label>
-                            <input type="radio" name="Genero" id="NoBin" value="NoBin">
+                            <input type="radio" name="fGenero" id="NoBin" value="NoBin">
                         </div>
                         <div class="subBody elemBlock">
                             <h3>Contanos que te interesa</h3>
-                            <div>
+                            <div id="subTemas" class="">
                                 <label for="Deportes">Deportes</label>
-                                <input type="checkbox" name="Deportes" id="Deportes"> 
+                                <input type="checkbox" name="fTemas" id="Deportes"> 
                                 <label for="Musica">Música</label>
-                                <input type="checkbox" name="Musica" id="Musica">
+                                <input type="checkbox" name="fTemas" id="Musica">
                                 <label for="Juegos">Juegos</label>
-                                <input type="checkbox" name="Juegos" id="Juegos"> 
+                                <input type="checkbox" name="fTemas" id="Juegos"> 
                                 <label for="Tecnologia">Tecnología</label>
-                                <input type="checkbox" name="Tecnologia" id="Tecnologia"> 
+                                <input type="checkbox" name="fTemas" id="Tecnologia"> 
                                 <label for="Otros">Otros</label>
-                                <input type="checkbox" name="Otros" id="Otros"> 
+                                <input type="checkbox" name="fTemas" id="Otros"> 
                             </div>                  
                         </div>
                         <div class="subBody elemBlock">
                             <h3>Tu País</h3>
-                            <select name="Pais" id="Pais">
+                            <select id="subPais" class="" name="fPais" id="subPais">
+                                <option value=""></option>
                                 <option value="Argentina">Argentina</option>
                                 <option value="Brasil">Brasil</option>
                                 <option value="Chile">Chile</option>
@@ -108,7 +109,8 @@
                             <textarea id="subCom" cols="30" rows="10" class="inputCom"></textarea></textarea>
                         </div>
                         <div class="subBody">
-                            <input class="button" type="submit" value="Enviar">
+                            <!-- <input id="btnEnviar" type="submit" value="Enviar"> -->
+                            <button type="button" onclick="myFunction()">Enviar</button>
                             <!-- <input class="button" type="reset" value="Reset"> -->
                         </div>
                     </div>
