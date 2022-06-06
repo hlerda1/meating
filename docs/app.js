@@ -83,16 +83,48 @@ window.onload = function() {
             edadError.classList.remove('hiddenError');
         }
     }
-}
-    
+}    
     function myFunction(){
-        
+
+        var checks = document.querySelectorAll('input[name="fTemas"]:checked');
+        var checkResumen = "";
+
+        checks.forEach((e) => {
+            checkResumen = checkResumen +" - "+ e.value
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
         if(validarNombre() == true && validarApellido() == true && 
             validarEmail() == true && validarEdad() == true && 
             validarGenero() == true && validarTemas() == true && 
             validarPais() == true){
-                alert("TODO BUENO")
+                // alert("TODO BUENO")
+                document.getElementById("pNombre").innerHTML = "Nombre: "+ document.getElementById("subNombre").value;
+                document.getElementById("pApellido").innerHTML = "Apellido: "+ document.getElementById("subApellido").value;
+                document.getElementById("pEmail").innerHTML = "Email: "+ document.getElementById("subEmail").value;
+                document.getElementById("pEdad").innerHTML = "Edad: "+ document.getElementById("subEdad").value;
+                document.getElementById("pSexo").innerHTML = "Sexo: "+ document.querySelector('input[name="fGenero"]:checked').value;
+                document.getElementById("pTemas").innerHTML = "Temas: " + checkResumen;
+                document.getElementById("pPais").innerHTML = "Pais: "+ document.getElementById("subPais").value;
+                modal.style.display = "block";
             }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+            modal.style.display = "none";
+            }
+        }
     }
 
     function validarEdad() {
@@ -149,13 +181,14 @@ window.onload = function() {
         }
     }
 
-    var radioButtons = document.querySelectorAll('input[name="fGenero"]');
+    // var radioButtons = document.querySelectorAll('input[name="fGenero"]');
 
     function validarGenero() {
-        // var x = false
+        // var x = ""
         for (i = 0; i < document.myForm.fGenero.length; i++){
             if(document.myForm.fGenero[i].checked){
                 document.getElementById("subGenero").classList.remove('alertaRoja');
+                // x = document.myForm.fGenero[i];                
                 return true;
             }
         }
