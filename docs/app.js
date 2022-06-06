@@ -111,7 +111,6 @@ window.onload = function() {
             validateBtnEmail() == true && validateBtnEdad() == true && 
             validateBtnGenero() == true && validateBtnTemas() == true && 
             validateBtnPais() == true){
-                // alert("TODO BUENO")
                 document.getElementById("pNombre").innerHTML = "Nombre: "+ document.getElementById("subNombre").value;
                 document.getElementById("pApellido").innerHTML = "Apellido: "+ document.getElementById("subApellido").value;
                 document.getElementById("pEmail").innerHTML = "Email: "+ document.getElementById("subEmail").value;
@@ -222,4 +221,12 @@ window.onload = function() {
             document.getElementById('subPais').classList.remove('alertRed')
             return true;
         }
+    }
+
+    function deploy(){
+        document.getElementById("subSection").style.display="block"
+    }
+
+    function contract(){
+        document.getElementById("subSection").style.display="none"
     }

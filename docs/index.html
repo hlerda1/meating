@@ -18,8 +18,16 @@
                 <div class="mainBarDiv">
                     <h1>~Meating~</h1>
                 </div>
-                <div id="menuDiv" class="mainBarDiv">
-                    <img id="menuMain" src="./imagenes/Menu.png" alt="Menu">                    
+                <div id="menuDiv" class="mainBarDiv" onmouseover="deploy()" onmouseout="contract()">
+                    <a href="#" ><img id="menuMain" src="./imagenes/Menu.png" alt="Menu"></a>
+                        <div id="subSection">
+                            <p class="menuDesp"><a href="">HOME</a></p>
+                            <p class="menuDesp"><a href="">TUS PEDIDOS</a></p>
+                            <p class="menuDesp"><a href="">PRODUCTOS</a></p>
+                            <p class="menuDesp"><a href="">NOVEDADES</a></p>
+                            <p class="menuDesp"><a href="">CONTACTOS</a></p>
+                            <p class="menuDesp"><a href="">ACERCA DE</a></p>
+                        </div>              
                 </div>
             </div>
             <div>
@@ -134,22 +142,20 @@
             </div>
             <!-- The Modal -->
             <div id="myModal" class="modal">
-
                 <!-- Modal content -->
                 <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2>Los datos han sido verificados</h2>
-                <p id="pNombre" class="pModal">Nombre:</p>
-                <p id="pApellido" class="pModal">Apellido:</p>
-                <p id="pEmail" class="pModal">Email:</p>
-                <p id="pEdad" class="pModal">Edad</p>
-                <p id="pGenero" class="pModal">Sexo</p>
-                <p id="pTemas" class="pModal">Temas</p>
-                <p id="pPais" class="pModal">País</p>
-                </div>
-            
+                    <span class="close">&times;</span>
+                    <h2>Los datos han sido verificados</h2>
+                    <p id="pNombre" class="pModal">Nombre:</p>
+                    <p id="pApellido" class="pModal">Apellido:</p>
+                    <p id="pEmail" class="pModal">Email:</p>
+                    <p id="pEdad" class="pModal">Edad</p>
+                    <p id="pGenero" class="pModal">Sexo</p>
+                    <p id="pTemas" class="pModal">Temas</p>
+                    <p id="pPais" class="pModal">País</p>
+                </div>            
             </div>
-            <!-- tHE mODAL -->
+            <!-- The Modal -->
         </main>
         <footer>
             <h3>CARNAMOR S.R.L.</h3>
