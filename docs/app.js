@@ -84,7 +84,7 @@ window.onload = function() {
         }
     }
 }    
-    function myFunction(){
+    function clickEnviar(){
 
         validateBtnNombre();
         validateBtnApellido();

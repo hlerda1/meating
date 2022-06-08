@@ -2,6 +2,8 @@ Meating - Lo ultimo en red social que te une a vos con la carne de tu sueños. C
 
 Meating - El camino al corazón es por el estomago.
 
+https://hlerda1.github.io/meating/
+
 05/06/2022 Primer commit con la estructura principal, diseño básico y primeras validaciones en JS.
 06/05/2022
     - Validaciones completadas, ajustes de CSS implementados
